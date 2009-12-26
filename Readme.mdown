@@ -1,5 +1,58 @@
 Party
 =====
+For all your money calculating needs.
 
-about
+About
 -----
+Say you throw a party (like we all do sometimes). Yet you don't want to pay for all the food and the booze. So you take your cost and divide it by the number of guests. Sounds easy right?.
+
+What if multiple people buy stuff and you want to keep it fair? Party to the rescue. 
+
+Examples
+--------
+First require the party gem.   
+    
+    require "party"
+
+Then we define the participants (these are the names of all the people attending).
+    
+    participants 'Me', 'Myself', 'I'
+
+Pretty straightforward. Next is saying who bought what.
+
+    bought "Me", "Booze", 34
+    bought "Myself", "Gift", 20
+    
+So 'Me' bought Booze for 34 euros and 'Myself' bought a gift for 20 euros.
+The last and final step: creating a summary.
+
+    summarize
+    
+so all the code becomes:
+    
+    require "party"
+
+    participants 'Me', 'Myself', 'I'
+
+    bought "Me", "Booze", 34
+    bought "Myself", "Gift", 20
+
+    summarize
+    
+and this will produce the following output:
+
+    ---Bill---
+    Me:	    34	spend on: Booze
+    Myself:	20	spend on: Gift
+    ----------
+    total:	54
+
+    Final balance:
+    Me has to receive 16.0 euro
+    Myself has to receive 2.0 euro
+    I needs to pay 18.0 euro
+    
+Installation
+------------
+installing is as easy as
+    gem install party
