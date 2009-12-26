@@ -19,19 +19,6 @@ def fancy_mode
   end
 end
 
-# core extension for ruby 1.8.7
-class Float
-  alias round_old round
-  def round(number = nil)
-    if number
-      (self * 10**number).round.to_f / 10**number
-    else
-      round_old
-    end
-  end
-end
-
-
 def summarize(rounding=2)
   print_bill
   puts
