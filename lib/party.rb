@@ -7,12 +7,13 @@ def bought(name,item, price)
   money[name] += price
 end
 
+alias  bought2 bought
 # monkey-patches String class to have a buys method
 def fancy_mode
   # some minor modifications to the String class ;) 
   String.class_eval do
-    define_method(:buys) do |*args|
-      bought(self,*args)
+    define_method(:bought) do |*args|
+      bought2(self,*args)
     end
   end
   

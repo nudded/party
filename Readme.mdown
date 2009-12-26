@@ -54,7 +54,7 @@ and this will produce the following output:
     
 There is also a fancy-mode, enabling it will allow you to call
     
-    "Me".buys "Booze", 30
+    "Me".bought "Booze", 30
 
 It will add a buys method to String class (which is just fancy). If you want to enable it, just call the fancy_mode method. (an example can be found in examples/example.rb)
 

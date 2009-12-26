@@ -4,9 +4,9 @@ fancy_mode
 
 participants "Toon", "Rob","Willem", "Johan"
 
-"Toon".buys "Booze", 34
-"Rob".buys "Veggies" , 40
-"Toon".buys "Meat" , 50
-"Willem".buys "Nonsense" ,1
+"Toon".bought "Booze", 34
+"Rob".bought "Veggies" , 40
+"Toon".bought "Meat" , 50
+"Willem".bought "Nonsense" ,1
 
 summarize 
