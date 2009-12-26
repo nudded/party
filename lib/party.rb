@@ -2,12 +2,13 @@ def participants(*args)
   @participants ||= args.flatten
 end
 
+
 def bought(name,item, price)
   list[name] << item if item
   money[name] += price
 end
 
-alias  bought2 bought
+alias bought2 bought
 # monkey-patches String class to have a buys method
 def fancy_mode
   # some minor modifications to the String class ;) 
@@ -16,8 +17,20 @@ def fancy_mode
       bought2(self,*args)
     end
   end
-  
 end
+
+# core extension for ruby 1.8.7
+class Float
+  alias round_old round
+  def round(number = nil)
+    if number
+      (self * 10**number).round.to_f / 10**number
+    else
+      round_old
+    end
+  end
+end
+
 
 def summarize(rounding=2)
   print_bill
