@@ -1,5 +1,7 @@
 require "party"
 
+fancy_mode
+
 participants "Toon", "Rob","Willem", "Johan"
 
 "Toon".buys "Booze", 34
