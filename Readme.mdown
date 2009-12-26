@@ -52,6 +52,12 @@ and this will produce the following output:
     Myself has to receive 2.0 euro
     I needs to pay 18.0 euro
     
+There is also a fancy-mode, enabling it will allow you to call
+    
+    "Me".buys "Booze", 30
+
+It will add a buys method to String class (which is just fancy). If you want to enable it, just call the fancy_mode method. (an example can be found in examples/example.rb)
+
 Installation
 ------------
 installing is as easy as
