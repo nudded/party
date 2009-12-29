@@ -9,10 +9,6 @@ module Party
     money[name] += price
   end
 
-  def pays(name,to, amount)
-
-  end
-
   alias bought2 bought
   # monkey-patches String class to have a buys method
   def fancy_mode
@@ -72,5 +68,5 @@ module Party
   end
   
 end
-
+# so methods can be used like normal
 include Party
